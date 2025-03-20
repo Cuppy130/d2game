@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #333;
+    background-color: #000;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -17,4 +17,19 @@ body {
 canvas {
     border: 2px solid hsl(0, 0%, 100%);
     background-color: #000;
+
+    width: 512px;
+    height: 512px;
+
+    /* landscape and portrate on mobile devices */
+    /* make this responsive */
+    @media (max-width: 512px) {
+        width: 100%;
+        height: auto;
+    }
+
+    @media (max-height: 512px) {
+        width: auto;
+        height: 100%;
+    }
 }
